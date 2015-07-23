@@ -2,228 +2,37 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Interview by umarethina</title>
+
+    <title>Yesgraph by umarethina</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     
-    <link href="styles/wizard.css" rel="stylesheet" type="text/css" media="screen">
-    <script type="text/javascript" src="js/Wizard.js"></script>
-    
   </head>
+
   <body>
     <section class="page-header">
-      <h1 class="project-name">Interview</h1>
-      <h2 class="project-tagline">Interview Solution</h2>
-      <a href="https://github.com/umarethina/interview" class="btn">View on GitHub</a>
-      <a href="https://github.com/umarethina/interview/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/umarethina/interview/tarball/master" class="btn">Download .tar.gz</a>
-      <a href="#" onclick="showAssignDesktop()" class="btn">Assign Desktop</a>
-      
-    </section>
-    <section>
-    	<img src="./images/assign_desktop.png">
+      <h1 class="project-name">Yesgraph</h1>
+      <h2 class="project-tagline">YesGraph</h2>
+      <a href="https://github.com/umarethina/yesgraph" class="btn">View on GitHub</a>
+      <a href="https://github.com/umarethina/yesgraph/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/umarethina/yesgraph/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
-<div class="assign-desktop" style="display: none">
-    <div id="popupAssign">
-        <form action="" method="post" name="form">
-
-        <span>
-            <table class="assign-desktop-table">
-              <tr>
-                <th class="assign-header"> Assign Desktops</th>
-                <button class="close-assign"><img onclick="hideAssignDesktop()"></button>
-
-              </tr>
-            </table>
-        </span>
-
-         <table class="assign-desktop-tabs" id="HeaderTable">
-            <tr>
-                 <td id="HeaderTableStep1" class="assign-desktop-tab-label enabled">
-                    1: DEFINITION
-                 </td>
-                <td id="HeaderTableStep2" class="assign-desktop-tab-label disabled">
-                    2: IMAGES
-                </td>
-
-                <td id="HeaderTableStep3" class="assign-desktop-tab-label disabled">
-                    3: USERS
-                </td>
-
-                <td id="HeaderTableStep4" class="assign-desktop-tab-label disabled">
-                    4: SUMMARY
-                </td>
-
-            </tr>
-
-         </table>
-
-
-<span id="Step1">
-    <table class="assign-desktop-table-step1">
-    <tr class="assign-desktop-types">
-        <td class="assign-desktop-types-label">
-            <div> VM Type: </div>
-        </td>
-        <td class="assign-desktop-types-td">
-            <img name="dedicated" src="images/Desktop_Dedicated_On_65p.png" class="dedicated active" onclick="handleTypeSelection(this.name)">
-            <div>Dedicated</div>
-        </td>
-        <td class="assign-desktop-types-td">
-            <img name="floating" src="images/Desktop_Floating_Off_65p.png" class="floating deactive" onclick="handleTypeSelection(this.name)">
-            <div>Floating</div>
-        </td>
-        <td class="assign-desktop-types-td">
-            <img name="session"  src="images/Desktop_Session_Off_65p.png" class="session deactive" onclick="handleTypeSelection(this.name)">
-            <div>Session</div>
-        </td>
-    </tr>
-    </table>
-    <div>
-        Fixed Attributes
-        <div class="assign-desktop-table-sub-header">
-            <table class="assign-desktop-tab1-fixed-attr">
-                <tr>
-                    <td class="label">
-                       Data Center:
-                    </td>
-                    <td>
-                        <div class="assign-desktop-dropdown-styleSelect">
-                            <select>
-                                <option value="sfo">San Francisco</option>
-                                <option value="sjc">San Jose</option>
-                                <option value="sc">Santa Clara</option>
-                                <option value="mv">Mountain View</option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="label">
-                        <div> Desktop Model:</div>
-                    </td>
-                    <td>
-                        <div class="assign-desktop-dropdown-styleSelect">
-                            <select>
-                                <option value="standard"> Standard</option>
-                                <option value="highendconfiguration"> Highend configuration </option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="label">
-                        Domain:
-                    </td>
-                    <td>
-                        <div class="assign-desktop-dropdown-styleSelect">
-                            <select>
-                                <option value="domainalpha"> Domain Alpha </option>
-                                <option value="domainbeta"> Domain Beta </option>
-                                <option value="domaingamma"> Domain Gamma </option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                <td class="label">
-                    Join Domain:
-                </td>
-                    <td>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                            <label class="onoffswitch-label" for="myonoffswitch">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-</span>
-
-<span id="Step2" style="display:none">
-    <table>
-        <tr>
-            <td >Enter Image file:</td>
-            <td><input type="text"/></td>
-        </tr>
-    </table>
-</span>
-
-
-<span id="Step3" style="display:none">
-    <table>
-        <tr>
-            <td >Email:</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type="password"/></td>
-      </tr>
-    </table>
-</span>
-
-
-<span id="Step4" style="display:none">
-   <table>
-        <tr>
-            <td colspan="2">Select Version:</td>
-        </tr>
-         <tr>
-           <td>Version 1:</td>
-           <td><input id="Checkbox1"  type="checkbox" value="Yes"/></td>
-        </tr>
-        <tr>
-            <td>Version 2:</td>
-            <td><input id="Checkbox2" type="checkbox" value="Yes"/></td>
-        </tr>
-        <tr>
-            <td>Version 3:</td>
-            <td><input id="Checkbox3" type="checkbox" value="Yes"/></td>
-        </tr>
-   </table>
-
-</span>
-
-            <div class="assign-desktop-table-action">
-               <table>
-                <tr class="assign-desktop-table-buttons">
-                    <td>
-                        <input id="Save" class="save-button" type="button" value="Save" disabled="disabled"/>
-                    </td>
-                    <td>
-                       <input id="PreviousStep" class="back-button" type="button" value="Back" disabled="disabled"
-                                   name=""
-                                   onclick="handlePreviousStep()"/>
-                    </td>
-                    <td>
-                       <input id="NextStep" class="next-button" type="button" value="Next" name="Step2"
-                                   onclick="handleNextStep()"/>
-                    </td>
-                 </tr>
-               </table>
-            </div>
-        </form>
-
-    </div>
-</div>  		
- 		
-
+ 		<a href="http://localhost/info.php" class="btn">Click here to see the page...</a>
+     
+    <section class="main-content">
+       
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/umarethina/interview">Interview</a> is maintained by <a href="https://github.com/umarethina">umarethina</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/umarethina/yesgraph">Yesgraph</a> is maintained by <a href="https://github.com/umarethina">umarethina</a>.</span>
       </footer>
 
+    </section>
+
+  
   </body>
 </html>
 
