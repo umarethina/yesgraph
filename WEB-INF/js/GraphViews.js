@@ -14,9 +14,9 @@ function createPerWeekGraph(data) {
 			text: 'Rate of New Signups per week'
 		},
 		tooltip: {
-			formatter: function () {
-			   return 'Rate of New Signup for Week <b>' + this.x + '</b> is <b>' + this.y + '</b>';
-			}
+					formatter: function () {
+						return 'Rate of New Signup for Week <b>' + this.x + '</b> is <b>' + this.y + '</b>';
+					}
 		},
 		xAxis: {
 			title: {
@@ -155,7 +155,6 @@ function createRetentionUserRateGraph(data) {
 
 function createStackedUpGraph(data) {
 	var signups = [], retained = [], resurrected = [], churned = [];
-	var category = ['signups', 'retained', 'resurrected', 'churned'];
 
 	for (key in data) {
 		if (data.hasOwnProperty(key)) {

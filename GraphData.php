@@ -179,10 +179,11 @@ $query4 = "SELECT
            a.wk AS wk,
            (SELECT sum(x.signup) from userbreakdown AS x WHERE x.wk = a.wk) AS signups,
            (SELECT sum(x.retained) from userbreakdown AS x WHERE x.wk = a.wk) AS retained,
-           (SELECT sum(x.willchurn) from userbreakdown AS x WHERE x.wk = a.wk) AS churned,
+           IFNULL((SELECT sum(x.willchurn) from userbreakdown AS x WHERE x.wk = a.wk-1),0) AS churned,
            (SELECT sum(x.resurrected) from userbreakdown AS x WHERE x.wk = a.wk) AS resurrected
            FROM
-           (SELECT DISTINCT wk from userbreakdown) AS a";
+           (SELECT DISTINCT wk from userbreakdown) AS a
+           ORDER BY 1";
 $graph4Data = $pdo -> query($query4);
 $graph4rows = array();
 while($r = $graph4Data -> fetch(PDO::FETCH_ASSOC)) {
