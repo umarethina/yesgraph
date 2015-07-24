@@ -13,6 +13,11 @@ function createPerWeekGraph(data) {
 		title: {
 			text: 'Rate of New Signups per week'
 		},
+		tooltip: {
+			formatter: function () {
+			   return 'Rate of New Signup for Week <b>' + this.x + '</b> is <b>' + this.y + '</b>';
+			}
+		},
 		xAxis: {
 			title: {
 				text: 'Weeks'
