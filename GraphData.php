@@ -11,7 +11,7 @@ $databasetableUserBreakDown = "userbreakdown";
 
 
 $databaseusername="root";
-$databasepassword = "ssju3663148";
+$databasepassword = "";
 $fieldseparator = ",";
 $lineseparator = "\n";
 $csvfile = "csv/events2.csv";
